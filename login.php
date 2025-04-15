@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (! validate_form_field_is_filled('password')) {
-        $form_error = "The passsword field is required";
+        $form_error = "The password field is required";
     }
 
     if ($form_error == null) {
