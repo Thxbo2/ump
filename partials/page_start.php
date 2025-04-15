@@ -10,7 +10,7 @@
     </title>
 </head>
 <?php
-$diplay_background_image ??= false;
+$display_background_image ??= false;
 ?>
 
 <body class="<?= $displayBg ? 'home-page__bg-image' : '' ?>">
