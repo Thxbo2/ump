@@ -53,7 +53,7 @@
               <span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.php">Products</a>
+              <a class="nav-link" href="register.php">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.php">About Us</a>
@@ -80,7 +80,7 @@
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="login" action="login.php" method="POST">
+                <form id="login" action="scripts/login.php" method="POST">
                   <!-- Form error logic here -->
                   <div class="row">
                     <div class="col-md-12">

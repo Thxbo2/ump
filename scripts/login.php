@@ -6,16 +6,15 @@ require_once 'database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $id;
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :username AND password = :password");
+    $stmt = $connection->prepare("SELECT * FROM users WHERE email = :username AND password = :password");
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':password', $password);
     $stmt->execute();
 
     // Fetch the result
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $customer_id = $result['id']; // Fetch the user_id from the query result
+    $user_id = $result['id']; // Fetch the user_id from the query result
 
     if ($result && password_verify($password, $result['password'])) {
         // Password is correct, set session variables
