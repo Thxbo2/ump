@@ -72,6 +72,7 @@ if (!isset($_SESSION['logged'])) {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="scripts/logout.php">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
