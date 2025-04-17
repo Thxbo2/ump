@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    
+
   </head>
 
   <body>
@@ -28,7 +28,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span><marquee behavior="" direction="left">Large sale on smartphones, laptops and shoes!</marquee></span>
+            <?php include_once 'partials/marquee.php'; ?>
           </div>
         </div>
       </div>

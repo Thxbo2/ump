@@ -30,7 +30,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span><marquee behavior="" direction="left">Large sale on smartphones, laptops and shoes!</marquee></span>
+            <?php include_once 'partials/marquee.php'; ?>
           </div>
         </div>
       </div>
