@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION['error'])) {
+    $error = "Invalid email or password"; // Retrieve error message from session
+    unset($_SESSION['error']); // Clear the error message after displaying it
+} else {
+    $error = null; // Initialize error variable if not set
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,6 +93,11 @@
               <div class="container">
                 <form id="login" action="scripts/login.php" method="POST">
                   <!-- Form error logic here -->
+                  <?php if(!empty($error)) { ?>
+                    <div class="alert alert-danger" role="alert">
+                      <?php echo $error; ?>
+                    </div>
+                  <?php } ?>
                   <div class="row">
                     <div class="col-md-12">
                       <fieldset>

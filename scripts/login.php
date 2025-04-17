@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit(); // Ensure no further code is executed after the redirect
     } else {
         // Invalid credentials
+        $_SESSION['error'] = "Invalid email or password"; // Set error message in session
         header("Location: ../login.php?Invalid_credentials"); // Redirect to login page
         exit(); // Ensure no further code is executed after the redirect
     }
