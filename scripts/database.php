@@ -4,12 +4,6 @@ $dbname = 'ump_db';
 $username = 'root';
 $password = '';
 
-// $host = 'localhost';
-// $dbname = 'thabo_market_place';
-// $username = 'root';
-// $password = '12345678';
-
-
 $connection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password, [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
