@@ -8,7 +8,7 @@
     <meta name="author" content="Thabo Siliya">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Universal Media Platform</title>
+    <title>Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,10 +18,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+    
   </head>
 
   <body>
@@ -31,7 +28,7 @@ https://www.tooplate.com/view/2114-pixie
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span><marquee behavior="" direction="left">Large sale on smartphones, laptops and shoes!</marquee></span>
+            <?php include 'scripts/marquee.php'; ?>
           </div>
         </div>
       </div>
