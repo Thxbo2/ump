@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+require_once 'scripts/database.php';
 
  // check if the user logged in properly
 if (!isset($_SESSION['logged'])) {
@@ -41,7 +41,7 @@ if (!isset($_SESSION['logged'])) {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <?php include 'scripts/marquee.php'; ?>
+            <?php include 'partials/marquee.php'; ?>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['logged'])) {
         <div class="row">
           <div class="col-md-12">
             <div class="caption">
-              <h2>Welcome User</h2>
+              <h2>Welcome <?php echo $_SESSION['username']; ?></h2>
               <div class="line-dec"></div>
               <p>Pixie HTML Template can be converted into your desired CMS theme. Total <strong>5 pages</strong> included. You can use this Bootstrap v4.1.3 layout for any CMS. 
               <br><br>Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a> free template site. Thank you. Photo credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels website</a>.</p>

@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Password is correct, set session variables
         $_SESSION['logged'] = true;
         $_SESSION['email'] = $result['email'];
+        $_SESSION['username'] = $result['username'];
         $_SESSION['user_id'] = $result['id'];
         header("Location: ../marketplace.php"); // Redirect to dashboard page
         exit(); // Ensure no further code is executed after the redirect
