@@ -1,3 +1,16 @@
+<?php
+session_start();
+require_once 'database.php';
+
+ // check if the user logged in properly
+if (!isset($_SESSION['logged'])) {
+  echo "<script>alert('You are not authorized')</script>";
+  header("Location: index.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +31,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    
+
   </head>
 
   <body>
