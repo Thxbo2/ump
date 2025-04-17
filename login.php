@@ -83,7 +83,7 @@ https://www.tooplate.com/view/2114-pixie
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="" method="post">
+                <form id="login" action="" method="POST">
                   <!-- Form error logic here -->
                   <div class="row">
                     <div class="col-md-12">
