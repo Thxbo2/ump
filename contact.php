@@ -24,18 +24,6 @@
   </head>
 
   <body>
-    
-    <!-- Pre Header -->
-    <div id="pre-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
