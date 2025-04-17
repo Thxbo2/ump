@@ -70,7 +70,7 @@ https://www.tooplate.com/view/2114-pixie
     </nav>
 
     <!-- Page Content -->
-    <!-- About Page Starts Here -->
+    <!-- Login Page Starts Here -->
     <div class="contact-page">
       <div class="container">
         <div class="row">
@@ -84,33 +84,21 @@ https://www.tooplate.com/view/2114-pixie
             <div class="right-content">
               <div class="container">
                 <form id="contact" action="" method="post">
-                  <?php if ($form_error) : ?>
-                      <p class="form-field__error"><?= $form_error ?></p>
-                  <?php endif; ?>
+                  <!-- Form error logic here -->
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+                        <input name="subject" type="email" class="form-control" name="email" placeholder="Email..." required>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                        <input name="subject" type="password" class="form-control" name="password" placeholder="Password..." required>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">Send Message</button>
+                        <button type="submit" id="form-submit" class="button">Login</button>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
@@ -124,63 +112,13 @@ https://www.tooplate.com/view/2114-pixie
             </div>
           </div> <!-- col-md-6 ends here -->
           <div class="col-md-6">
-            <div id="map">
-            		<!-- How to change your own map point
-                           1. Go to Google Maps
-                           2. Click on your location point
-                           3. Click "Share" and choose "Embed map" tab
-                           4. Copy only URL and paste it within the src="" field below
-                    -->
-
               <img src="assets/images/login-bg.jpg" width="100%" height="500px" alt="">
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- About Page Ends Here -->
-
-    <!-- Subscribe Form Starts Here -->
-    <div class="subscribe-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>Subscribe on PIXIE now!</h1>
-            </div>
-          </div>
-          <div class="col-md-8 offset-md-2">
-            <div class="main-content">
-              <p>Godard four dollar toast prism, authentic heirloom raw denim messenger bag gochujang put a bird on it celiac readymade vice.</p>
-              <div class="container">
-                <form id="subscribe" action="" method="get">
-                  <div class="row">
-                    <div class="col-md-7">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" 
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }" 
-                    	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
-                    	value="Your Email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-5">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Subscribe Form Ends Here -->
-
-
-    
+    <!-- Login Page Ends Here -->
+  
     <!-- Footer Starts Here -->
     <div class="footer">
       <div class="container">
