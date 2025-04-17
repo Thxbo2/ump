@@ -52,16 +52,18 @@ https://www.tooplate.com/view/2114-pixie
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html">About Us</a>
-              <span class="sr-only">(current)</span>
+              <a class="nav-link" href="login.php">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="register.php">Register</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.php">About Us
+              <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
         </div>
