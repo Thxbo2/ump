@@ -47,18 +47,18 @@ https://www.tooplate.com/view/2114-pixie
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a class="nav-link" href="marketplace.php">Marketplace
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="sale.php">Sale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.php">Order</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="products.php">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="scripts/logout.php">Logout</a>
