@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['logged'] = true;
         $_SESSION['username'] = $result['email'];
         $_SESSION['user_id'] = $result['id'];
-        header("Location: ../user_dashboard.php"); // Redirect to dashboard page
+        header("Location: ../marketplace.php"); // Redirect to dashboard page
         exit(); // Ensure no further code is executed after the redirect
     } else {
         // Invalid credentials
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     echo "<script>alert(Invalid login attempt.)</script>";
-    header("Location: ../user_dashboard.php"); // Redirect to dashboard page
+    header("Location: ../index.php"); // Redirect to dashboard page
     exit(); // Ensure no further code is executed if the request method is not POST
 }
 ?>

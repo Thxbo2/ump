@@ -80,7 +80,7 @@
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="login" action="" method="POST">
+                <form id="login" action="login.php" method="POST">
                   <!-- Form error logic here -->
                   <div class="row">
                     <div class="col-md-12">
