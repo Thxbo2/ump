@@ -85,17 +85,17 @@
                   <div class="row">
                   <div class="col-md-12">
                       <fieldset>
-                        <input name="subject" type="text" class="form-control" name="username" placeholder="Username..." required>
+                        <input type="text" class="form-control" name="username" placeholder="Username..." required>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input name="subject" type="email" class="form-control" name="email" placeholder="Email..." required>
+                        <input type="email" class="form-control" name="email" placeholder="Email..." required>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input name="subject" type="password" class="form-control" name="password" placeholder="Password..." required>
+                        <input type="password" class="form-control" name="password" placeholder="Password..." required>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
