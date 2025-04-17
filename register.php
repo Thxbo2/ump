@@ -74,15 +74,20 @@
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Login</h1>
+              <h1>Register</h1>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="login" action="scripts/login.php" method="POST">
+                <form id="login" action="scripts/register.php" method="POST">
                   <!-- Form error logic here -->
                   <div class="row">
+                  <div class="col-md-12">
+                      <fieldset>
+                        <input name="subject" type="text" class="form-control" name="username" placeholder="Username..." required>
+                      </fieldset>
+                    </div>
                     <div class="col-md-12">
                       <fieldset>
                         <input name="subject" type="email" class="form-control" name="email" placeholder="Email..." required>
@@ -95,7 +100,7 @@
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">Login</button>
+                        <button type="submit" id="form-submit" class="button">Register</button>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
@@ -109,7 +114,7 @@
             </div>
           </div> <!-- col-md-6 ends here -->
           <div class="col-md-6">
-              <img src="assets/images/login-bg.jpg" width="100%" height="500px" alt="">
+              <img src="assets/images/register-bg.jpg" width="100%" height="500px" alt="">
           </div>
         </div>
       </div>
