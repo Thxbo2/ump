@@ -66,102 +66,64 @@ https://www.tooplate.com/view/2114-pixie
     </nav>
 
     <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="caption">
-              <h2>Ecommerce HTML Template</h2>
-              <div class="line-dec"></div>
-              <p>Pixie HTML Template can be converted into your desired CMS theme. Total <strong>5 pages</strong> included. You can use this Bootstrap v4.1.3 layout for any CMS. 
-              <br><br>Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a> free template site. Thank you. Photo credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels website</a>.</p>
-              <div class="main-button">
-                <a href="#">Order Now!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Banner Ends Here -->
-
     <!-- Featured Starts Here -->
-    <div class="featured-items">
+    <div class="contact-page">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Featured Items</h1>
+              <h1>Sale product</h1>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="owl-carousel owl-theme">
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="Item 1">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Item 2">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Item 3">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 4">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 5">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 6">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 7">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 8">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 9">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
+          <div class="col-md-6">
+            <div class="right-content">
+              <div class="container">
+                <form id="login" action="scripts/sale.php" method="POST">
+                  <!-- Form error logic here -->
+                  <?php if(!empty($error)) { ?>
+                    <div class="alert alert-danger" role="alert">
+                      <?php echo $error; ?>
+                    </div>
+                  <?php } ?>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input type="text" class="form-control" name="product_name" placeholder="Product name..." required>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea name="description" rows="6" class="form-control" placeholder="Product description..." required></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input type="number" class="form-control" name="product_price" id="product_image" placeholder="Product price (MWK)..." required  accept="image/*" onchange="previewImage(event)">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input type="file" class="" name="product_image" placeholder="Product image..." required>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">Sale</button>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="share">
+                        <h6>You can also keep in touch on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div> <!-- col-md-6 ends here -->
+          <div class="col-md-6">
+              <img id="image_preview" src="assets/images/sale-bg.jpg" width="100%" height="500px" alt="Product Preview">
           </div>
         </div>
       </div>
