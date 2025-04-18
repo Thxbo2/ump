@@ -18,10 +18,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
 
   <body>
@@ -89,22 +86,22 @@ https://www.tooplate.com/view/2114-pixie
                   <div class="row">
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="text" class="form-control" name="product_name" placeholder="Product name..." required>
+                        <input type="text" class="form-control" name="product_name" placeholder="Product name..." required="">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <textarea name="description" rows="6" class="form-control" placeholder="Product description..." required></textarea>
+                        <textarea name="description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="number" class="form-control" name="product_price" id="product_image" placeholder="Product price (MWK)..." required  accept="image/*" onchange="previewImage(event)">
+                        <input type="number" class="form-control" name="product_price" id="product_image" placeholder="Product price (MWK)..." required="">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="file" class="" name="product_image" placeholder="Product image..." required>
+                        <input type="file" class="" name="product_image" placeholder="Product image..." required="" accept="image/*" onchange="previewImage(event)">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
@@ -123,55 +120,12 @@ https://www.tooplate.com/view/2114-pixie
             </div>
           </div> <!-- col-md-6 ends here -->
           <div class="col-md-6">
-              <img id="image_preview" src="assets/images/sale-bg.jpg" width="100%" height="500px" alt="Product Preview">
+              <img id="image_preview" src="assets/images/sale-bg.jpg" width="100%" alt="Product Preview" style="border-radius: 10px; display: none;">
           </div>
         </div>
       </div>
     </div>
-    <!-- Featred Ends Here -->
-
-
-    <!-- Subscribe Form Starts Here -->
-    <div class="subscribe-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>Subscribe on PIXIE now!</h1>
-            </div>
-          </div>
-          <div class="col-md-8 offset-md-2">
-            <div class="main-content">
-              <p>Integer vel turpis ultricies, lacinia ligula id, lobortis augue. Vivamus porttitor dui id dictum efficitur. Phasellus vel interdum elit.</p>
-              <div class="container">
-                <form id="subscribe" action="" method="get">
-                  <div class="row">
-                    <div class="col-md-7">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" 
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }" 
-                    	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
-                    	value="Your Email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-5">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Subscribe Form Ends Here -->
-
-
-    
+    <!-- Sale Product Ends Here -->    
     <!-- Footer Starts Here -->
     <div class="footer">
       <div class="container">
@@ -223,7 +177,9 @@ https://www.tooplate.com/view/2114-pixie
       </div>
     </div>
     <!-- Sub Footer Ends Here -->
-
+    
+    <!-- Scripts -->
+    <script src="assets/js/preview-img.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
