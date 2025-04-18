@@ -87,8 +87,8 @@ if (!isset($_SESSION['logged'])) {
             <div class="caption">
               <h2>Welcome <?php echo $_SESSION['username']; ?></h2>
               <div class="line-dec"></div>
-              <p>Pixie HTML Template can be converted into your desired CMS theme. Total <strong>5 pages</strong> included. You can use this Bootstrap v4.1.3 layout for any CMS. 
-              <br><br>Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a> free template site. Thank you. Photo credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels website</a>.</p>
+              <p>Universal market place is still growing as a community and platform. <strong>3 major</strong> features are available to you as a user, viewing, ordering and and keeping track of your products. 
+              <br><br>Please tell your friends about <a rel="nofollow" href="#">Universal Market Place</a> so that we grow as a community with products and support.</p>
               <div class="main-button">
                 <a href="#">Order Now!</a>
               </div>
