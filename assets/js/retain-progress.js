@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
-    const inputs = form.querySelectorAll('input, textarea, select');
+    const inputs = form.querySelectorAll('input, textarea, select, file, number'); // Select all input elements
 
     // Load saved data from localStorage
     inputs.forEach(input => {
