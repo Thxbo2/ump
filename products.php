@@ -53,9 +53,6 @@ https://www.tooplate.com/view/2114-pixie
             <li class="nav-item">
               <a class="nav-link" href="sale.php">Sale</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="order.php">Order</a>
-            </li>
             <li class="nav-item active">
               <a class="nav-link" href="products.php">Products
                 <span class="sr-only">(current)</span>

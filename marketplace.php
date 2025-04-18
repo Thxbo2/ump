@@ -65,9 +65,6 @@ if (!isset($_SESSION['logged'])) {
               <a class="nav-link" href="sale.php">Sale</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="order.php">Order</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="products.php">Products</a>
             </li>
             <li class="nav-item">
