@@ -76,7 +76,7 @@
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="login" action="scripts/sale.php" method="POST">
+                <form id="sale-form" action="scripts/sale.php" method="POST">
                   <!-- Form error logic here -->
                   <?php if(!empty($error)) { ?>
                     <div class="alert alert-danger" role="alert">
