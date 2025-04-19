@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $quantity = $_POST['product_quantity'];
 
     // Validate inputs
-    if (empty($name) || empty($price) || empty($image) || empty($description) || $quantity) {
+    if (empty($name) || empty($price) || empty($image) || empty($description) || empty($quantity)) {
         log_error($connection, "Failed to capture all fields", "Product sale", $_SESSION['email']);
-        $_SESSION['error'] = "Field capture error, try again later"; // Set error message in session
+        $_SESSION['error'] = "Failed to capture all fields, try again later"; // Set error message in session
         header("Location: ../sale.php?error=All_fields_are_required.");
         exit();
     }
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     move_uploaded_file($_FILES['product_image']['tmp_name'], "../images/products/" . $image);
 
     // Create the product
-    create_product($connection, $user_id, $name, $price, $image, $description);
+    create_product($connection, $user_id, $name, $price, $image, $description, $quantity, "available");
     
 } else {
     log_error($connection, "Invalid request method", "Product sale", $_SESSION['email']);
@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-function create_product($connection, $user_id, $name, $price, $image, $description, $quantity)
+function create_product($connection, $user_id, $name, $price, $image, $description, $quantity, $availability)
 {
-    $statement = $connection->prepare("INSERT INTO products (seller_id, name, price, image, description, quantity) VALUES (?,?,?,?,?)");
-    $statement->execute([$user_id, $name, (int) $price, $image, $description, $quantity]);
-    $_SESSION['success'] = "Product posted"; // Set error message in session
+    $statement = $connection->prepare("INSERT INTO products (seller_id, name, price, image, description, quantity, availability) VALUES (?,?,?,?,?,?,?)");
+    $statement->execute([$user_id, $name, $price, $image, $description, $quantity, $availability]);
+    $_SESSION['success'] = "Product posted!"; // Set error message in session
     header("Location: ../sale.php?error=Product_posted.");
 }
 ?>

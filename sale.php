@@ -87,7 +87,7 @@ unset($_SESSION['success']);
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="sale-form" action="scripts/sale_product.php" method="POST">
+                <form id="sale-form" action="scripts/sale_product.php" method="POST" enctype="multipart/form-data">
                   <!-- Display error or success messages -->
                   <?php if ($error): ?>
                       <div class="alert alert-danger" role="alert">
@@ -123,7 +123,7 @@ unset($_SESSION['success']);
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="file" class="" name="product_image" placeholder="Product image..." required="" accept="image/*" onchange="previewImage(event)">
+                        <input type="file" class="" name="product_image" placeholder="Product image..." required="" accept="jpg, jpeg, png" onchange="previewImage(event)">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
