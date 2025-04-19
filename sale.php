@@ -94,9 +94,14 @@
                         <textarea name="description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
                       </fieldset>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                       <fieldset>
-                        <input type="number" class="form-control" name="product_price" id="product_image" placeholder="Product price (MWK)..." required="">
+                        <input type="number" class="form-control" name="product_price" id="product_price" placeholder="Product price (MWK)..." required="" min="1">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input type="number" class="form-control" name="product_quantity" id="product_quantity" placeholder="Quantity..." required="" min="1">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
@@ -168,7 +173,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
+              <p>Copyright &copy; 2025 Universal Market Place 
                 
                 - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
             </div>
