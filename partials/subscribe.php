@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h1>Subscribe to UMP now!</h1>
+                    <h1>Subscribe to Universal Market Place now!</h1>
                 </div>
             </div>
             <div class="col-md-8 offset-md-2">

@@ -15,9 +15,7 @@ require_once 'scripts/product_fetch.php';
     <meta name="description" content="website best for goods exchange">
     <meta name="author" content="Thabo Siliya">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>Universal Media Platform</title>
-
+    
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
