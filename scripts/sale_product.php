@@ -37,4 +37,8 @@ function create_product($connection, $user_id, $name, $price, $image, $descripti
     $statement = $connection->prepare("INSERT INTO products (seller_id,name, price,image,description) VALUES (?,?,?,?,?)");
     $statement->execute([$user_id, $name, (int) $price, $image, $description]);
 }
+
+function crosscheck_product($connection, $name) {
+    
+}
 ?>
