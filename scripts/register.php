@@ -22,7 +22,8 @@ function crosscheck_user($connection, $email)
     return $result;
     if ($result) {
         // User already exists, handle accordingly (e.g., show error message)
-        log_error($connection, "User already exists!", "Registration", $email);
+        $_SESSION['error'] = "User already exists!";
+        log_error($connection, "User already exists", "Registration", $email);
         header("Location: ../register.php?error=User_already_exists.");
         exit(); // Ensure no further code is executed after the redirect
     } else {
@@ -38,10 +39,12 @@ function create_user($connection, $username, $email, $password)
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $statement = $connection->prepare("INSERT INTO users (username, email, password) VALUES (?,?,?)");
         $statement->execute([$username, $email, $hashed_password]);
+        $_SESSION['success'] = "Registration successful, login";
         header("Location: ../login.php"); // Redirect to login page
         exit(); // Ensure no further code is executed after the redirect
     } catch (PDOException $e) {
         // Log the error message (optional) and display a user-friendly message
+        $_SESSION['error'] = "Registration failed, try again later";
         log_error($connection, $e->getMessage() . "Failed registration attempt", "Registration", $email);
         header("Location: ../register.php?error=Registration_failed. Please_try_again_later."); // Redirect to register page with error message
         exit(); // Ensure no further code is executed after the redirect
