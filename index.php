@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once 'scripts/database.php';
+require_once 'scripts/logs.php'; // Include the logs.php file for logging functionality
+require_once 'scripts/product_fetch.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,73 +74,19 @@
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="Item 1">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Item 2">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Item 3">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 4">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 5">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 6">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 7">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 8">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 9">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <?php foreach ($products as $product): ?>
+                <a href="login.php?id=<?php echo $product['id']; ?>">
+                    <div class="featured-item">
+                        <img src="images/products/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                        <h4><?php echo htmlspecialchars($product['name']); ?></h4>
+                        <h6>MWK<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></h6>
+                    </div>
+                </a>
+              <?php endforeach; ?>
+            </div> <!-- owl-carousel ends here -->
+          </div> <!-- col-md-12 ends here -->
+        </div> <!--- row ends here -->
+      </div> <!-- container ends here -->
     </div>
     <!-- Featred Ends Here -->
 
