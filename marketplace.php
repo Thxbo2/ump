@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once 'scripts/database.php';
+require_once 'scripts/logs.php'; // Include the logs.php file for logging functionality
+require_once 'scripts/product_fetch.php';
 
  // check if the user logged in properly
 if (!isset($_SESSION['logged'])) {
