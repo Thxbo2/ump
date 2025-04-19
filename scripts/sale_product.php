@@ -8,10 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['product_name'];
     $price = $_POST['product_price'];
     $image = $_FILES['product_image']['name'];
-    $description = $_POST['description'];
+    $description = $_POST['product_description'];
+    $quantity = $_POST['product_quantity'];
 
     // Validate inputs
-    if (empty($name) || empty($price) || empty($image) || empty($description)) {
+    if (empty($name) || empty($price) || empty($image) || empty($description) || $quantity) {
         $_SESSION['error'] = "All fields are required"; // Set error message in session
         header("Location: ../sale.php?error=All_fields_are_required.");
         exit();
@@ -29,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-function create_product($connection, $user_id, $name, $price, $image, $description)
+function create_product($connection, $user_id, $name, $price, $image, $description, $quantity)
 {
-    $statement = $connection->prepare("INSERT INTO products (seller_id,name, price,image,description) VALUES (?,?,?,?,?)");
-    $statement->execute([$user_id, $name, (int) $price, $image, $description]);
+    $statement = $connection->prepare("INSERT INTO products (seller_id, name, price, image, description, quantity) VALUES (?,?,?,?,?)");
+    $statement->execute([$user_id, $name, (int) $price, $image, $description, $quantity]);
 }
 ?>
