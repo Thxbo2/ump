@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!empty($_SESSION['error'])){
+  $error = $_SESSION['error'];
+  unset
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +83,7 @@
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form id="sale-form" action="scripts/sale.php" method="POST">
+                <form id="sale-form" action="scripts/sale_product.php" method="POST">
                   <!-- Form error logic here -->
                   <?php if(!empty($error)) { ?>
                     <div class="alert alert-danger" role="alert">

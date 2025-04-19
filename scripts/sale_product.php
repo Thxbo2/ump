@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validate inputs
     if (empty($name) || empty($price) || empty($image) || empty($description) || $quantity) {
-        $_SESSION['error'] = "All fields are required"; // Set error message in session
+        log_error($connection, "Failed to capture all fields", "Product sale", $_SESSION['email']);
+        $_SESSION['error'] = "Field capture error, try again later"; // Set error message in session
         header("Location: ../sale.php?error=All_fields_are_required.");
         exit();
     }
@@ -25,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     create_product($connection, $user_id, $name, $price, $image, $description);
     
 } else {
+    log_error($connection, "Invalid request method", "Product sale", $_SESSION['email']);
     $_SESSION['error'] = "Invalid request method"; // Set error message in session
     header("Location: ../sale.php?error=Invalid_request_method.");
     exit();
