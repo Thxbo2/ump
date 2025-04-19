@@ -2,7 +2,7 @@
 session_start();
 if(!empty($_SESSION['error'])){
   $error = $_SESSION['error'];
-  unset
+  
 }
 ?>
 <!DOCTYPE html>
@@ -89,7 +89,7 @@ if(!empty($_SESSION['error'])){
                     <div class="alert alert-danger" role="alert">
                       <?php echo $error; ?>
                     </div>
-                  <?php } ?>
+                  <?php unset($_SESSION['error']); } ?>
                   <div class="row">
                     <div class="col-md-12">
                       <fieldset>
