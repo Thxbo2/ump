@@ -1,9 +1,13 @@
 <?php
 session_start();
-if(!empty($_SESSION['error'])){
-  $error = $_SESSION['error'];
-  
-}
+// Retrieve error and success messages from the session
+$error = !empty($_SESSION['error']) ? $_SESSION['error'] : null;
+$success = !empty($_SESSION['success']) ? $_SESSION['success'] : null;
+
+// Clear the messages from the session after retrieving them
+unset($_SESSION['error']);
+unset($_SESSION['success']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,12 +88,18 @@ if(!empty($_SESSION['error'])){
             <div class="right-content">
               <div class="container">
                 <form id="sale-form" action="scripts/sale_product.php" method="POST">
-                  <!-- Form error logic here -->
-                  <?php if(!empty($error)) { ?>
-                    <div class="alert alert-danger" role="alert">
-                      <?php echo $error; ?>
-                    </div>
-                  <?php unset($_SESSION['error']); } ?>
+                  <!-- Display error or success messages -->
+                  <?php if ($error): ?>
+                      <div class="alert alert-danger" role="alert">
+                          <?php echo htmlspecialchars($error); ?>
+                      </div>
+                  <?php endif; ?>
+
+                  <?php if ($success): ?>
+                      <div class="alert alert-success" role="alert">
+                          <?php echo htmlspecialchars($success); ?>
+                      </div>
+                  <?php endif; ?>
                   <div class="row">
                     <div class="col-md-12">
                       <fieldset>
@@ -98,7 +108,7 @@ if(!empty($_SESSION['error'])){
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <textarea name="description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
+                        <textarea name="product_description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
                       </fieldset>
                     </div>
                     <div class="col-md-6">

@@ -36,5 +36,7 @@ function create_product($connection, $user_id, $name, $price, $image, $descripti
 {
     $statement = $connection->prepare("INSERT INTO products (seller_id, name, price, image, description, quantity) VALUES (?,?,?,?,?)");
     $statement->execute([$user_id, $name, (int) $price, $image, $description, $quantity]);
+    $_SESSION['success'] = "Product posted"; // Set error message in session
+    header("Location: ../sale.php?error=Product_posted.");
 }
 ?>
