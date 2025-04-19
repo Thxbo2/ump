@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2025 at 09:11 PM
+-- Generation Time: Apr 19, 2025 at 11:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -67,22 +67,25 @@ INSERT INTO `orders` (`id`, `product_id`, `buyer_name`, `buyer_email`, `quantity
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `seller_id` int(11) DEFAULT NULL,
+  `seller_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` text DEFAULT NULL,
+  `description` text NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `quantity` int(7) NOT NULL,
+  `availability` enum('In_stock','Out_of_stock') NOT NULL,
+  `units_remaining` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `seller_id`, `name`, `description`, `price`, `image`, `created_at`) VALUES
-(1, 6, 'iPhone ', '16 Pro Max', 6000000.00, 'img/iPhone-16-pro-max.jpg', '2025-03-12 09:39:37'),
-(2, 6, 'Google Pixel', 'Google pixel 9 pro', 5500000.00, 'img/google-pixel-9-pro', '2025-03-12 09:57:31'),
-(3, 5, 'Samsung Galaxy', 'Samsung Galaxy S24 Ultra.jpg', 6600000.00, 'samsung-galaxy-s24-ultra.jpg', '2025-03-12 09:59:45');
+INSERT INTO `products` (`id`, `seller_id`, `name`, `description`, `price`, `image`, `created_at`, `quantity`, `availability`, `units_remaining`) VALUES
+(1, 6, 'iPhone ', '16 Pro Max', 6000000.00, 'img/iPhone-16-pro-max.jpg', '2025-03-12 09:39:37', 1, 'In_stock', 1),
+(2, 6, 'Google Pixel', 'Google pixel 9 pro', 5500000.00, 'img/google-pixel-9-pro', '2025-03-12 09:57:31', 1, 'In_stock', 1),
+(3, 5, 'Samsung Galaxy', 'Samsung Galaxy S24 Ultra.jpg', 6600000.00, 'samsung-galaxy-s24-ultra.jpg', '2025-03-12 09:59:45', 1, 'In_stock', 1);
 
 -- --------------------------------------------------------
 

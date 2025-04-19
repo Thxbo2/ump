@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'database.php';
 require_once 'logs.php';
 
@@ -11,13 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validate inputs
     if (empty($name) || empty($price) || empty($image) || empty($description)) {
-        header("Location: ../sale.php?error=All fields are required.");
-        exit();
-    }
-
-    // Check if the product already exists
-    if (crosscheck_product($connection, $name)) {
-        header("Location: ../sale.php?error=Product already exists.");
+        $_SESSION['error'] = "All fields are required"; // Set error message in session
+        header("Location: ../sale.php?error=All_fields_are_required.");
         exit();
     }
 
@@ -28,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     create_product($connection, $user_id, $name, $price, $image, $description);
     
 } else {
+    $_SESSION['error'] = "Invalid request method"; // Set error message in session
     header("Location: ../sale.php?error=Invalid_request_method.");
     exit();
 }
@@ -36,9 +33,5 @@ function create_product($connection, $user_id, $name, $price, $image, $descripti
 {
     $statement = $connection->prepare("INSERT INTO products (seller_id,name, price,image,description) VALUES (?,?,?,?,?)");
     $statement->execute([$user_id, $name, (int) $price, $image, $description]);
-}
-
-function crosscheck_product($connection, $name) {
-    
 }
 ?>
