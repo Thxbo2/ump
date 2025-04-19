@@ -38,7 +38,7 @@ if (isset($_SESSION['error'])) {
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/images/header-logo.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="assets/images/header-logo.png" alt="Brand Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -113,7 +113,7 @@ if (isset($_SESSION['error'])) {
             </div>
           </div> <!-- col-md-6 ends here -->
           <div class="col-md-6">
-              <img src="assets/images/login-bg.jpg" width="100%" height="500px" alt="">
+              <img src="assets/images/login-bg.jpg" width="100%" height="500px" alt="Login banner image" style="border-radius: 10px;">
           </div>
         </div>
       </div>
