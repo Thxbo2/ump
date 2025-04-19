@@ -25,11 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Invalid credentials
         $_SESSION['error'] = "Invalid email or password"; // Set error message in session
+        log_error($connection, "Invalid email or password", "Login", $email);
         header("Location: ../login.php?Invalid_credentials"); // Redirect to login page
         exit(); // Ensure no further code is executed after the redirect
     }
 } else {
-    header("Location: ../index.php"); // Redirect to dashboard page
+    $_SESSION['error'] = "Invalid request method";
+    log_error($connection, "Invalid request method", "Login", $email);
+    header("Location: ../index.php?Invalid_request_method"); // Redirect to dashboard page
     exit(); // Ensure no further code is executed if the request method is not POST
 }
 ?>
