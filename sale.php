@@ -101,9 +101,25 @@ unset($_SESSION['success']);
                       </div>
                   <?php endif; ?>
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                       <fieldset>
                         <input type="text" class="form-control" name="product_name" placeholder="Product name..." required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <select name="product_category" id="product_category" class="form-control" required="">
+                          <option value="" disabled selected>Select product category...</option>
+                          <option value="electronics">Electronics</option>
+                          <option value="clothing">Clothing</option>
+                          <option value="shoes">Shoes</option>
+                          <option value="accessories">Accessories</option>
+                          <option value="furniture">Furniture</option>
+                          <option value="books">Books</option>
+                          <option value="toys">Toys</option>
+                          <option value="sports">Sports</option>
+                          <option value="other">Other</option>
+                        </select>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
