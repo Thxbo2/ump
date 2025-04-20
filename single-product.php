@@ -8,6 +8,14 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+// Fetch product by ID
+$products = fetch_product_by_id($connection, $_GET['id']);
+if ($products === false) {
+    // Handle error fetching product
+    echo "<script>alert('Error fetching product. Please try again later.')</script>";
+    exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
