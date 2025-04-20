@@ -103,7 +103,7 @@ unset($_SESSION['success']);
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
-                        <input type="text" class="form-control" name="product_name" placeholder="Product name..." required="">
+                        <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Product name..." required="">
                       </fieldset>
                     </div>
                     <div class="col-md-6">
@@ -124,7 +124,7 @@ unset($_SESSION['success']);
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <textarea name="product_description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
+                        <textarea name="product_description" id="product_description" rows="6" class="form-control" placeholder="Product description..." required=""></textarea>
                       </fieldset>
                     </div>
                     <div class="col-md-6">
@@ -139,7 +139,7 @@ unset($_SESSION['success']);
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="file" class="" name="product_image" placeholder="Product image..." required="" accept="jpg, jpeg, png" onchange="previewImage(event)">
+                        <input type="file" class="" name="product_image" id="product_image" placeholder="Product image..." required="" accept="jpg, jpeg, png" onchange="previewImage(event)">
                       </fieldset>
                     </div>
                     <div class="col-md-12">
