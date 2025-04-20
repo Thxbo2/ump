@@ -11,6 +11,14 @@ if (!isset($_SESSION['logged'])) {
   exit;
 }
 
+// Fetch products from the database
+$products = fetch_all_products($connection);
+if ($products === false) {
+    // Handle error fetching products
+    echo "<script>alert('Error fetching products. Please try again later.')</script>";
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>

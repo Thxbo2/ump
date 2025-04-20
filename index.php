@@ -4,6 +4,13 @@ require_once 'scripts/database.php';
 require_once 'scripts/logs.php'; // Include the logs.php file for logging functionality
 require_once 'scripts/product_fetch.php';
 
+// Fetch products from the database
+$products = fetch_all_products($connection);
+if ($products === false) {
+    // Handle error fetching products
+    echo "<script>alert('Error fetching products. Please try again later.')</script>";
+    exit;
+}
 
 ?>
 <!DOCTYPE html>
