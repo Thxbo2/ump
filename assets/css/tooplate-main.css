@@ -455,6 +455,12 @@ a {
 #carousel .slides li {
 	width: 150px!important;
 }
+#carousel .slides img {
+    width: 200px; /* Set the desired width */
+    height: 100%; /* Set the desired height */
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
 .single-product .right-content h4 {
 	font-size: 17px;
 	font-weight: 700;
