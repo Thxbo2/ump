@@ -81,7 +81,7 @@ unset($_SESSION['success']);
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Sale product</h1>
+              <h1>Sale product today!</h1>
             </div>
           </div>
           <div class="col-md-6">
